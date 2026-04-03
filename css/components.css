@@ -1,0 +1,199 @@
+/* =========================
+   TYPE SELECTOR
+========================= */
+#type-selector {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.card-btn {
+  width: 130px;
+  height: 110px;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.card-btn:hover {
+  transform: translateY(-3px);
+}
+
+.card-btn.active {
+  border-color: #40d7c3;
+}
+
+.type-icon {
+  font-size: 28px;
+}
+
+/* =========================
+   ACTION TABS
+========================= */
+#action-tabs {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  min-width: 180px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #4f6df5;
+  color: white;
+}
+
+/* =========================
+   INPUT PANEL
+========================= */
+#input-panel {
+  background: transparent;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.arithmetic-layout {
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.input-box input,
+.input-box select,
+.operator-box select {
+  width: 100%;
+  padding: 16px 14px;
+  border: 1px solid #e1e4ea;
+  border-radius: 0;
+  font-size: 15px;
+  outline: none;
+  background: white;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.operator-box select:focus {
+  border-color: #4f6df5;
+}
+
+.operator-box {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.operator-box select {
+  width: 70px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.calculate-btn {
+  width: 100%;
+  margin-top: 24px;
+  background: #4f6df5;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background: #3d59db;
+}
+
+/* =========================
+   RESULT BOX
+========================= */
+.result-box {
+  margin-top: 26px;
+  background: white;
+  border-left: 4px solid #40d7c3;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.result-box label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.result-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4f6df5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  #type-selector,
+  #action-tabs {
+    justify-content: center;
+  }
+
+  .input-grid,
+  .arithmetic-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+
+  .card-btn {
+    width: 100%;
+  }
+
+  .operator-box {
+    justify-content: flex-start;
+  }
+}
